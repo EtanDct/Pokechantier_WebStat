@@ -1,4 +1,4 @@
-const DYNMAP_URL = 'http://89.167.92.22:8123/';
+const DYNMAP_URL = import.meta.env.VITE_DYNMAP_URL || 'http://89.167.92.22:8123/';
 
 export default function MapPage() {
   return (

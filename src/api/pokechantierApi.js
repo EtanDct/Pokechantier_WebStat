@@ -1,6 +1,7 @@
 // Single API entrypoint used everywhere in the app.
-// Calls go through Vite proxy to avoid browser CORS issues.
-const API_BASE_URL = '/api';
+// VITE_API_URL must be set in production (ex: https://pokeapi.chantierland.com).
+// En local le proxy Vite prend le relais si on laisse la variable vide.
+const API_BASE_URL = (import.meta.env.VITE_API_URL || '') + '/api';
 
 async function request(path, init = {}) {
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
