@@ -11,6 +11,11 @@ export default defineConfig({
         changeOrigin: true,
         secure: true,
       },
+      '/dynmap': {
+        target: 'https://pokeapi.chantierland.com',
+        changeOrigin: true,
+        secure: true,
+      },
     },
   },
 });

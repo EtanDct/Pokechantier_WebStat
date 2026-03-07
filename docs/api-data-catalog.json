@@ -1,0 +1,286 @@
+{
+  "generatedAt": "2026-03-07T14:03:00Z",
+  "apiBaseUrl": "https://pokeapi.chantierland.com",
+  "liveProbe": {
+    "checkedAt": "2026-03-07T14:02:49Z",
+    "status": "unavailable",
+    "details": "Toutes les routes testees renvoient HTTP 503: no available server.",
+    "endpoints": [
+      {
+        "endpoint": "GET /api/health",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/players",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/leaderboard",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/pokedex",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/pokedex/files",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/pokedex/tree",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/stats/files",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/storage/files",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/debug/world",
+        "status": 503,
+        "responsePreview": "no available server"
+      },
+      {
+        "endpoint": "GET /api/debug/identity",
+        "status": 503,
+        "responsePreview": "no available server"
+      }
+    ]
+  },
+  "fieldsByEndpoint": {
+    "GET /api/health": [
+      "status",
+      "timestamp"
+    ],
+    "GET /api/players": [
+      "count",
+      "players[].uuid",
+      "players[].shortUuid",
+      "players[].name",
+      "players[].hasStats",
+      "players[].hasPokedex",
+      "error",
+      "cached"
+    ],
+    "GET /api/players/:uuid/profile": [
+      "ok",
+      "uuid",
+      "shortUuid",
+      "name",
+      "pokedex.count",
+      "pokedex.seen",
+      "pokedex.caught",
+      "pokedex.completion",
+      "pokedex.completionFormatted",
+      "pokedex.shinyCaught",
+      "pokedex.shinySeen",
+      "stats.playTime.ticks",
+      "stats.playTime.hours",
+      "stats.playTime.minutes",
+      "stats.playTime.formatted",
+      "stats.deaths",
+      "stats.mobKills",
+      "stats.damageDealt",
+      "stats.damageTaken",
+      "stats.jumps",
+      "stats.leaveGame",
+      "stats.distances.walkKm",
+      "stats.distances.sprintKm",
+      "stats.distances.swimKm",
+      "stats.distances.flyKm",
+      "stats.distances.fallKm",
+      "stats.distances.climbKm",
+      "stats.cobblemon.caught",
+      "stats.cobblemon.registered",
+      "stats.cobblemon.shinyCaught",
+      "error"
+    ],
+    "GET /api/leaderboard": [
+      "count",
+      "ranking[].rank",
+      "ranking[].uuid",
+      "ranking[].shortUuid",
+      "ranking[].name",
+      "ranking[].count",
+      "ranking[].seen",
+      "ranking[].caught",
+      "ranking[].completion",
+      "ranking[].completionFormatted",
+      "ranking[].shinyCaught",
+      "ranking[].shinySeen",
+      "cached"
+    ],
+    "GET /api/pokedex": [
+      "found",
+      "path",
+      "entries[]",
+      "error"
+    ],
+    "GET /api/pokedex/files": [
+      "exists",
+      "path",
+      "count",
+      "entries[]",
+      "error"
+    ],
+    "GET /api/pokedex/tree": [
+      "exists",
+      "path",
+      "subdir_count",
+      "total_files",
+      "tree[].prefix",
+      "tree[].files[]",
+      "tree[].count",
+      "tree[].note",
+      "error"
+    ],
+    "GET /api/pokedex/:uuid/summary": [
+      "ok",
+      "uuid",
+      "count",
+      "seen",
+      "caught",
+      "pokemon[].species",
+      "pokemon[].knowledge",
+      "pokemon[].shiny",
+      "pokemon[].gender",
+      "pokemon[].form",
+      "error"
+    ],
+    "GET /api/pokedex/:uuid": [
+      "ok",
+      "uuid",
+      "path",
+      "raw",
+      "error"
+    ],
+    "GET /api/stats/files": [
+      "exists",
+      "path",
+      "count",
+      "entries[]",
+      "error"
+    ],
+    "GET /api/stats/:uuid": [
+      "ok",
+      "uuid",
+      "name",
+      "playTime.ticks",
+      "playTime.hours",
+      "playTime.minutes",
+      "playTime.formatted",
+      "deaths",
+      "mobKills",
+      "damageDealt",
+      "damageTaken",
+      "jumps",
+      "leaveGame",
+      "distances.walkKm",
+      "distances.sprintKm",
+      "distances.swimKm",
+      "distances.flyKm",
+      "distances.fallKm",
+      "distances.climbKm",
+      "cobblemon.caught",
+      "cobblemon.registered",
+      "cobblemon.shinyCaught",
+      "error"
+    ],
+    "GET /api/stats/raw/:uuid": [
+      "stats"
+    ],
+    "GET /api/storage/files": [
+      "exists",
+      "path",
+      "count",
+      "entries[]",
+      "error"
+    ],
+    "GET /api/debug/world": [
+      "exists",
+      "path",
+      "entries[]",
+      "error"
+    ],
+    "GET /api/debug/identity": [
+      "usercache[].path",
+      "usercache[].accessible",
+      "usercache[].entries",
+      "usercache[].sample.name",
+      "usercache[].sample.uuid",
+      "usercache[].reason",
+      "ftbEssentials.accessible",
+      "ftbEssentials.snbtFiles",
+      "ftbEssentials.files[]",
+      "ftbEssentials.reason"
+    ]
+  },
+  "displaySuggestions": [
+    {
+      "id": "overview_cards",
+      "title": "Cards dashboard",
+      "fields": [
+        "GET /api/players -> count",
+        "GET /api/leaderboard -> count",
+        "GET /api/leaderboard -> ranking[].completion",
+        "GET /api/health -> status",
+        "GET /api/health -> timestamp"
+      ]
+    },
+    {
+      "id": "leaderboard_table",
+      "title": "Tableau leaderboard",
+      "fields": [
+        "GET /api/leaderboard -> ranking[].rank",
+        "GET /api/leaderboard -> ranking[].name",
+        "GET /api/leaderboard -> ranking[].caught",
+        "GET /api/leaderboard -> ranking[].seen",
+        "GET /api/leaderboard -> ranking[].completionFormatted",
+        "GET /api/leaderboard -> ranking[].shinyCaught",
+        "GET /api/leaderboard -> ranking[].shinySeen"
+      ]
+    },
+    {
+      "id": "player_profile",
+      "title": "Profil joueur detaille",
+      "fields": [
+        "GET /api/players/:uuid/profile -> name",
+        "GET /api/players/:uuid/profile -> pokedex.count",
+        "GET /api/players/:uuid/profile -> pokedex.caught",
+        "GET /api/players/:uuid/profile -> pokedex.completionFormatted",
+        "GET /api/players/:uuid/profile -> stats.playTime.formatted",
+        "GET /api/players/:uuid/profile -> stats.deaths",
+        "GET /api/players/:uuid/profile -> stats.mobKills",
+        "GET /api/players/:uuid/profile -> stats.distances.sprintKm",
+        "GET /api/players/:uuid/profile -> stats.cobblemon.shinyCaught"
+      ]
+    },
+    {
+      "id": "ops_debug",
+      "title": "Monitoring serveur",
+      "fields": [
+        "GET /api/debug/world -> exists",
+        "GET /api/debug/world -> entries[]",
+        "GET /api/debug/identity -> usercache[].accessible",
+        "GET /api/debug/identity -> ftbEssentials.accessible",
+        "GET /api/storage/files -> count"
+      ]
+    }
+  ],
+  "notes": [
+    "Ce fichier combine les champs documentes dans l API et le statut live actuel des endpoints.",
+    "Quand l API reviendra en ligne, il faudra relancer un export live pour remplir les valeurs reelles par joueur.",
+    "Le script scripts/export-api-catalog.mjs est fourni pour automatiser cette regeneration quand Node est disponible."
+  ]
+}

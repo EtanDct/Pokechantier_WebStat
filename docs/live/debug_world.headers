@@ -1,0 +1,9 @@
+HTTP/2 200 
+access-control-allow-origin: *
+alt-svc: h3=":443"; ma=2592000
+content-type: application/json; charset=utf-8
+date: Sat, 07 Mar 2026 14:31:29 GMT
+etag: W/"d07-Qd+qX0U5RAtlVCQCFxwNbc7B/3w"
+x-powered-by: Express
+content-length: 3335
+
